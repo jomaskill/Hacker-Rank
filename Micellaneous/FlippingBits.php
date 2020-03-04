@@ -1,7 +1,7 @@
 <?php
 
 //Testes de entrada
-$n = "3\n0\n802743475\n35601423";
+$n = "3\n2147483647\n1\n0";
 echo flippingBits($n);
 
 
@@ -17,12 +17,12 @@ function flippingBits($n) {
 
 
     for($j=1 ; $j <= $nLinhas ; $j++){
-        $sum[$j-1] = 0;
+        //$sum[$j-1] = 0;
         for($i=31 ; $i >= 0 ;$i--){
-            if($n[$j] >= pow(2, $i)) {
-                $n[$j] -= pow(2, $i);
-                $array[$i] = 0;
-            }
+                if($n[$j] >= pow(2, $i)) {
+                    $n[$j] -= pow(2, $i);
+                    $array[$i] = 0;
+                }
             else $array[$i] = 1;
             if($array[$i] == 1) $sum[$j-1] += pow(2, $i);
         }
