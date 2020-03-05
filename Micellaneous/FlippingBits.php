@@ -1,22 +1,15 @@
 <?php
 
-//Testes de entrada
-$n = "3\n2147483647\n1\n0";
-echo flippingBits($n);
-
-
-
 // Complete the flippingBits function below.
 function flippingBits($n) {
 
-    $n = explode("\n", $n);
-    $nLinhas = $n[0];
+    explode("\n", $n) ? $n = explode("\n", $n) : $n = $n;
 
     $sum = [];
     $array = [];
 
 
-    for($j=1 ; $j <= $nLinhas ; $j++){
+    for($j=0 ; $j < sizeof($n) ; $j++){
         //$sum[$j-1] = 0;
         for($i=31 ; $i >= 0 ;$i--){
                 if($n[$j] >= pow(2, $i)) {
