@@ -1,18 +1,15 @@
 <?php
 
-//Testes de entrada
-$n = 3;
-$ar = [2,2,2];
+// Complete the staircase function below.
+function staircase($n)
+{
 
-echo SimpleArraySum($n, $ar);
+    for($i=0 ; $i<$n ; $i++){
+        for($j=0 ; $j < $i ; $j++){
+            echo "#";
+        }
 
-function simpleArraySum($n, $ar) {
-
-    $sum = 0;
-
-    for($i=0 ; $i < $n ; $i++){
-        $sum += $ar[$i];
+        echo "\n";
     }
-
-    return $sum;
 }
+

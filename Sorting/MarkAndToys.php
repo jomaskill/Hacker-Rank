@@ -12,5 +12,5 @@ function maximumToys($prices, $k) {
         $numberOfToys++;
     }
 
-    return $numberOfToys;
+
 }
